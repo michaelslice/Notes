@@ -36,12 +36,8 @@ int reference()
 }
 
 /**
- * Pointer variables - A pointer is a special type of C++ variable that can hold the address of another variable
  *
- * @note
- *
- *
- *
+ *  Pointer variables - A pointer is a special type of C++ variable that can hold the address of another variable
  *
  */
 
