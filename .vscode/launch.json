@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/User/Desktop/Self-Learning/C++/Bitwise",
-      "program": "c:/Users/User/Desktop/Self-Learning/C++/Bitwise/build/Debug/outDebug",
+      "cwd": "c:/Users/User/Desktop/Self-Learning/C++/Pointers",
+      "program": "c:/Users/User/Desktop/Self-Learning/C++/Pointers/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
