@@ -99,7 +99,19 @@ int bitwise_right_shift(int x, int y)
     // In bitwise RIGHT SHIFT you move the bits by a certain number of spaces to the right.
     // Every time you left shift you decrease the number by 2 *  
     
-    z = x << 1; // Answer is 12
+
+    z = x >> 1; // Answer is 3
+}
+
+int bitwise_not(int x, int y)
+{
+    x = 6;     // 6 in binary  00000110
+    y = 12;    // 12 in binary 00001100
+    int z = 0; //          00000011
+
+    // In bitwise NOT every bit is inverted.
+
+    z = ~x; // A
 }
 
 int main()
@@ -107,5 +119,6 @@ int main()
     int x = 6;  // 6 in binary  00000110
     int y = 12; // 12 in binary 00001100
     int z = 0;  //              00000100
+     
     return 0;
 }
