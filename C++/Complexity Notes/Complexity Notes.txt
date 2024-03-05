@@ -1,0 +1,28 @@
+Least Optimal 
+
+O(n!)
+O(2^n)
+O(n^3)
+
+More Optimal
+
+O(n^2) - Quadratic Complexity - Grows quadratically
+O(n Log n) - Log-Linear time complexity - 
+O(n) - Linear time complexity - Grows linear with input
+O(sqrt(n)) - square root of n complexity - Grows proportional to the square root of the input size
+O(log n) - Logarithmic time complexity 
+O(1) - Constant time complexity, efficiency is constant 
+
+
+
+O(1) - Constant time - 
+Accessing an element in array by index, 
+inserting or deleting a element at the beginning or end of a array.
+looking up a element in a array
+
+O(n) - Linear time complexity - 
+Calculating the sum of a array
+looping through array
+insert element in middle, remove middle, search
+
+ 
