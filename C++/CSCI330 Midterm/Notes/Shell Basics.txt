@@ -1,0 +1,46 @@
+Shell Basics
+
+To set a variable
+
+varname = value
+
+Print the variable
+
+echo $varname
+
+Set a alias 
+
+alias ll="ls -l"
+
+Remove alias
+
+unalias ll
+
+Shell History
+
+!! - Runs last command
+
+!5 - Runs the command at history 5
+
+!-3 - Runs the command 3 commands ago
+
+Run multiple commands at once 
+
+date; pwd; ls
+
+
+
+How backticks affect a command 
+
+echo "Today's date is `date`"
+
+Backticks can be used to encapsulate a command
+
+$(command) Command Substitution
+
+echo "User $(whoami) is on $(hostname)"
+
+COMMAND SUBSTITUTION IS USEFUL IF YOU NEED TO RUN A COMMAND USING DATA THAT ANOTHER COMMAND PRINTS OUT
+
+Automatically Appending the data to filenames
+cp "$filename" "$filename$(date + %F)"

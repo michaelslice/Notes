@@ -1,0 +1,23 @@
+Output Redirection
+
+Output Redirection - Allows the user to take control where the output of a command is sent.
+By default the output is sent to the standard output(stdout), typically displayed in the terminal.
+
+> : Redirects standard output to a file overwriting the file if it already exists.
+
+ls > output_file.txt : Writes ls to output_file.txt and overwites content
+
+>> : Redirects standard output to a file and appends the contents to the file if it already exists
+
+ls >> output_file.txt
+
+Input Redirection - Allows you to change the source of input for a command. By default a command 
+reads input from the terminal 
+
+sort < file.txt : The shell reads input from the file instead of from the terminal 
+
+HERE DOCUMNET COMMAND 
+
+cat << EOF : When this command is run the shell keeps requesting input until the word "EOF" is run
+
+

@@ -1,0 +1,73 @@
+Redirecting Other File Descriptors:
+
+Redirecting Standard Error (stderr):
+	command 2 > error_file  # Redirect stderr to a file
+	command > output_file 2>&1  # Redirect stderr to the same destination as stdout
+
+Redirecting Custom File Descriptors:
+	command 3> custom_file  # Redirect file descriptor 3 to a file
+
+
+Closing File Descriptors:
+	command 3>&-  # Close file descriptor 3
+
+
+Multiple commands on same line with ;
+	command1 ; command2 ; command3
+
+	echo "Hello" ; ls -l ; date
+
+	However, note that using ; to separate commands doesn't create any logical connection 	between them. If you want to run the subsequent commands only if the previous one succeeds, 	you should use the && operator. Conversely, if you want to run subsequent commands only if 	the previous one fails, you should use the || operator.
+	
+
+This will run command2 only if command1 succeeds, and command3 only if command2 succeeds.
+	command1 && command2 && command3
+
+
+This will run command2 only if command1 fails, and command3 only if command2 fails.
+	command1 || command2 || command3
+
+
+Command Substituion
+	Backticks (``):
+	You can use backticks to perform command substitution. Anything enclosed within backticks 	will be treated as a command to be executed, and the output of that command will replace the 	backticked expression.
+
+	current_date=`date`
+	echo "Today's date is $current_date"
+
+	Dollar Parentheses ($()):
+	Another syntax for command substitution is using the $() construct. This works similarly 	to backticks but is generally preferred due to its clarity and ease of nesting.
+
+	output=$(command)
+
+	current_date=$(date)
+	echo "Today's date is $current_date"
+
+SHELL WILDCARDS
+	'*' Matches zero or more characters
+	
+	Ex. ls file_ * : This commands will show the files that match the beginning name file_
+
+	* (asterisk): Matches zero or more characters.
+? (question mark): Matches exactly one character.
+[] (brackets): Matches any one character within the specified range or set.
+! (exclamation mark): Matches any character not specified within the brackets.
+{-} (braces): Matches any one of the comma-separated strings inside the braces.
+Here are some examples of how you can use Shell Wildcards:
+
+*.txt: Matches all files with a .txt extension.
+file?.txt: Matches files like file1.txt, file2.txt, etc., where ? represents any single character.
+[abc]*.jpg: Matches files starting with a, b, or c and ending with .jpg.
+[!0-9]*: Matches files that do not start with a digit.
+{*.jpg,*.png}: Matches files with either .jpg or .png extension.
+
+copy files somewhere
+
+
+DIFFERENCE BETWEEN PIPE
+
+SEMICOLON: Runs commands sequentially
+
+PIPE: RUNS BOTH COMMANDS AT THE SAME TIME
+
+
