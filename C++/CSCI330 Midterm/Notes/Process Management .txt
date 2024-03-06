@@ -1,0 +1,59 @@
+Process Management 
+
+fork : Creates a new process 
+
+wait : Wait for a process to terminate
+
+exec : Execute a program
+
+
+System Call: Fork
+
+Fork: Creates a new process that is duplicate of current process 
+new process is almost the same as current process
+
+new process is child of current process 
+
+old process is parent of new process 
+
+after call to fork both processes run concurrently
+
+The child process and the parent process run in seperate memory spaces. 
+At the time of fork() both memory spaces have the same content. Memory writes 
+file mappings 
+
+
+PID : Process id 
+
+System Call: Wait
+
+pid_t wait(int *status)
+
+Lets parent process wait until a child process terminates 
+
+Parent is restarted once a child process terminates 
+
+Returns process id of terminated child 
+
+Returns -1 if there is no child to wait for 
+
+
+System Call: Exec
+
+Exec : Family of functions that replace current process image with a new process image 
+
+Library functions 
+
+execl, exexlp, execle, execv, execvp
+
+
+C Library Function: execl 
+
+Starts executable for command specified in path
+new executable runs in current procecss 
+
+
+
+
+
+

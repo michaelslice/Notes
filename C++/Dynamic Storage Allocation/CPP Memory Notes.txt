@@ -1,0 +1,26 @@
+Scope - Where you can access a name in a program
+
+- Block / Local Scope - Variables in a function 
+- File/ Global Scope - Mostly for constants, in scope for whole file
+- Class Scope - data member, and member functions
+
+Storage Class - how long and where does this reside in memory
+
+- Automatic - progress call stack
+- Static - static storage area
+- Dynamic - free store / heap
+
+Linkage - Can this nam be used in a diferent file then the one in which it is defined 
+
+- No Linkage - All block scoped
+- Internal Linkage - global constants and global variables 
+
+-External Linkage - global variables and function
+
+
+
+
+
+
+
+

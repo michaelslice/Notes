@@ -1,0 +1,50 @@
+Turing 
+Hopper
+
+
+rm dir - remove directory, removes empty directory 
+
+rm - remove files
+
+rmdir - removes files that are empty
+
+rm -r - removes a directory with all files 
+
+
+pwd -prints absolute directory
+
+~ home - directory 
+
+/ - root diretory is a forward slash
+
+.. - one directory up 
+
+../../.. - three directorys up 
+
+three streams
+
+std::out
+
+std::cin	
+
+std::air
+
+mkdir - makes a new directory
+
+TURING HOPPER
+
+GREEN FILE - IS EXECUTABLE
+
+COMMAND LINE ARGUEMENTS
+
+rm -r - removes directory
+
+g++ file.cpp
+
+./file.cpp
+
+
+System Calls
+
+042 - In cpp specifies a different base 
+
