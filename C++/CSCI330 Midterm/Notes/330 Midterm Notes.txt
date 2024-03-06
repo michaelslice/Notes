@@ -48,15 +48,15 @@ SHELL WILDCARDS
 	
 	Ex. ls file_ * : This commands will show the files that match the beginning name file_
 
-	* (asterisk): Matches zero or more characters.
 ? (question mark): Matches exactly one character.
+* (asterisk): Matches zero or more characters.
 [] (brackets): Matches any one character within the specified range or set.
 ! (exclamation mark): Matches any character not specified within the brackets.
 {-} (braces): Matches any one of the comma-separated strings inside the braces.
 Here are some examples of how you can use Shell Wildcards:
 
-*.txt: Matches all files with a .txt extension.
 file?.txt: Matches files like file1.txt, file2.txt, etc., where ? represents any single character.
+*.txt: Matches all files with a .txt extension.
 [abc]*.jpg: Matches files starting with a, b, or c and ending with .jpg.
 [!0-9]*: Matches files that do not start with a digit.
 {*.jpg,*.png}: Matches files with either .jpg or .png extension.
@@ -70,4 +70,20 @@ SEMICOLON: Runs commands sequentially
 
 PIPE: RUNS BOTH COMMANDS AT THE SAME TIME
 
+DISPLAY FILES 1-20
 
+ls file{1..20}.txt
+
+DISPLAY FILES 10-20
+
+ls file[1-2][0-9].txt
+
+DISPLAY FILES INCREMENTED BY 2
+
+ls file{1..10..2}
+
+1..3..5..7..9
+
+
+
+teSt
