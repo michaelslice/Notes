@@ -8,7 +8,7 @@ set.remove("test")
 for i in set:
     print(i)
 
-
+# Every value of the array will be passed in using *args
 # *args can be used to pass in a tuple of arguements 
 def func(*args): 
     print(args)
