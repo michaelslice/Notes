@@ -1,0 +1,39 @@
+JavaScript Notes
+
+Datatypes:
+	Numbers
+	Strings
+	Boolean
+	Array
+	Object
+
+Variables:
+	var: variable keyword, that is global
+	let: Can be updated but not redeclared, variable only exists within its scope so you can reuse the name in different scope, block scoped
+	const: Stands for constant, const is similar to let in that it is block scoped
+<script> tag:
+	Allows you to write Java script code in HTML
+
+	<script src="app.js"> </script>
+
+Functions:
+	Function is defined with the function keyword, followed by a name
+
+	function add(): void {};
+
+Arrow-Functions:
+	const doSomething = () => {}
+
+const names = ["Pedro", "Jack", "Jose"]
+const names2  = [...names, "Joel"];
+
+	names2 is equal to all the names in names, and "Joel"
+
+Manipulating Arrays:
+
+	.map(): Will iterate through a array
+	names.map((name) => { console.log(name)};
+
+	.filter(): Will filter an array based on a condition
+
+	

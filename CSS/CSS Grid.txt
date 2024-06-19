@@ -1,0 +1,49 @@
+CSS Grid
+
+display: grid
+	Set display to grid
+
+grid-template-rows:
+	Sets how many rows of pixels to allocate
+	
+grid-template-columns:
+	Sets how many columns of pixels to allocate
+
+grid-row-start:
+	Start row location on grid for element
+grid-row-end:
+	End row location on grid for element
+grid-column-start:
+	Start column location on grid for element
+grid-column-end:
+	End column location on grid for element
+
+span: 
+	Specifies how far element will go
+	grid-row: span 2
+	grid-column: span 2
+
+grid-area:
+	grid-area: row-start / col-start / row-end / col-end
+	grid-area: 3 / 1 / -1 / -1
+
+grid-auto-rows:
+	Sets the size of the rows on any implicit grid
+
+grid-auto-flow:
+	Any implicit grid that is created can be a column or row
+
+repeat(number, pixels)
+	Will repeat the number 
+
+grid-gap:
+	Will set the gap for rows and columns
+
+auto-fit:
+	Will make the items auto fit and wrap onto next row making it automatically responsive
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-rows: repeat(4, 100px);
+
+
