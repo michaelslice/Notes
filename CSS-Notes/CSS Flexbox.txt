@@ -1,0 +1,85 @@
+CSS Flexbox
+
+MAIN-AXIS: Horizontal
+CROSS-AXIS: Vertical
+
+display: flex:
+	Creates two invisible axis, the main axis(horizontal), and cross axis(vertical), will position items horizontally on main axis
+
+flex-direction:
+	Will change the main axis to be vertical
+
+flex-direction: column:
+	Will change the main axis to be vertical
+
+flex-direction: row:
+	Will change the main axis to be horizontal, flex-direction is set to row by default
+
+justify-content:
+	Aligns items on the main axis, default is flex-start
+
+justify-content: flex-end
+	Will push items to end horizontally
+
+justify-content: center
+	Will center items horizontally
+
+justify-content: space-between
+	Will evenly distribute items horizontally
+
+justify-content: space-around
+	Will distribute space between every item, including the edges horizontally
+
+justify-content: space-evenly
+	Will space items evenly horizontally
+
+align-items: 
+	Aligns items on the cross axis
+
+align-items: flex-start
+	Place items at the start of the cross axis
+
+align-items: flex-end
+	Place items at the end of the cross axis
+
+align-items: center
+	Place items at the center of the cross axis
+
+align-items: baseline
+	Will align the base line text of each item on the cross axis
+
+flex-direction: column
+	 The main axis will become vertical
+
+flex-wrap: nowrap:
+	Items will try and fit in the space 
+
+flex-wrap: wrap:
+	If there is no space, items wrap to the next line
+
+align-content:
+	Only works when we have flex-wrap: wrap, and have items wrapping to the next line
+
+gap: 1em
+	Will add gaps between each item
+
+flex-grow: 1
+	Allows the item to grow if there is enough space
+
+flex-shrink: 5
+	Defines how fast one item will shrink in comparison to others
+
+flex-basis: 300px
+	Defines the size of an item before the remaining space is distributed
+
+flex:
+	Shorthand for flex-grow, flex-shrink, and flex-basis combined
+
+align-self:
+	Will override the value in align-item on the container but for the individual item
+
+order:
+	Can change the order in which icons appear
+
+
+	
