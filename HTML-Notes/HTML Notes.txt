@@ -1,0 +1,197 @@
+HTML Notes
+
+DOM:
+	Document Object Model: Is the data representation of the objects that comprise the structure and content of a document on the web.
+	It represents a page so that programs can change the document structure, style, and content.
+	The DOM represents the document as nodes and objects, that way programming languages can interact with the page.
+	The DOM is not part of the JavaScript language, but is a web API used to build websites.
+
+Core Interfaces in the DOM:
+	The document and window objects are the objects whose interfaces you generally use most often in DOM programming.
+	Window object represents something like the browser 
+	Document object is the root of the document itself 
+
+List of Common APIs in Web Page Scripting
+	document.querySelector()
+	document.querySelectorAll()
+	document.createElement()
+	Element.innerHTML()
+	Element.setAttribute()
+	Element.getAttribute()
+	EventTarget.addEventListener()
+	HTMLElement.style()
+	Node.appendChile()
+	window.onload()
+	window.scrollTo()
+
+HTML TAGS TO KNOW:
+
+<!DOCTYPE html>:
+	Tells browser document is a HTML document
+
+<html>:
+	Tells browser where the start of HTML is
+
+<head>:
+	Contains info about the webpage
+
+<body>:
+	What you will display to the user
+
+<title>:
+	Defines the title of the webpage
+
+<h1>:
+	Header tag
+
+<h2>:
+	Smaller Header Tag, <h6> is the smallest
+
+<p>:
+	Paragraph elements tag
+
+<br>:
+	Line break tag
+
+<hr>:
+	Horizontal rule tag
+
+<!-- -->:
+	Comment
+
+<a href="google.com"> </a>:
+	Hyperlink tag
+
+<img src="image.png">:
+	Image tag
+
+<audio controls src="file.mp3">:
+	Audio tag
+
+<video src="racing.mp4">
+	Video tag
+
+<b>test</b>:
+	Bold text
+
+<i>test</i>:
+	Italic text
+
+<big>big</big>:
+	Big text
+
+<small>small</small>:
+	Small text
+
+<sub>subscript</sub>:
+	Subscript text
+
+<sup>superscript</sup>:
+	Superscript text
+
+<ins>inserted</ins>:
+	Underlines text
+
+<del>delted</del>:
+	Puts a line through text
+
+<mark>marked</mark>:
+	Highlights text
+
+LISTS:
+
+<ul>:
+	Creates a unordered list
+
+<li>:
+	A list item element
+
+<ol>:
+	Ordered list, that will be numbered
+
+<dl>:
+	Description list
+
+ <dt>:
+	Description term, which goes within <dl> tags
+
+<dd>:
+	Description definition tags, that go within description list tags
+
+TABLES:
+
+<table>:
+	Table tag
+
+<tr>:
+	Table row tag
+
+<th>:
+	Table header tag
+
+<td>:
+	Table data tag
+
+<span>:
+	Adds markup to text or portion of a document
+
+<div>:
+	Defines a division of a document
+
+<meta>:
+	Represents various kinds of metadata that cannot be expressed using the title, base, link
+
+<iframe>:
+	Embeds content from another source into an HTML document, used for ads
+
+<button onclick="doSomething()">Button</button>:
+	Allows for something to be clicked in the browser
+
+<form>:
+	Form element tag
+
+<label for="fname">Name</label>:
+	Label that goes next to input
+
+<input for="fname" type="attribute for what you want them to type in"
+	name="name for data submitted"
+	placeholder="Name that will appear in frame"
+></input>:
+	Input element 	 
+
+<input type="reset">:
+	In a form this will reset the inputs
+
+<input type="submit">:
+	In a form you can add logic for submit form data
+
+<form action="action_page.php" method="POST">
+	Way to set submission logic to server
+
+<input type="password" maxlength="12" required>:
+	When input is entered it is treated like a password
+
+<input type="email">:
+	Email input 
+
+<input type="tel">:
+	Phone number input
+
+<input type="bdate">:
+	Birthday input
+
+<input type="quantity" min="0", max="99" value="1">:
+	Will add quantity input
+
+<label for="payment">payment:</label>:
+	<select id="payment" name="payment">
+		<option>mastercard</option>
+		<option>visa</option>
+		<option>giftcard</option>					
+	</select>
+
+This is how to add a dropdown menu and add options
+
+<input type="checkbox" id="subscribe" name="subscribe">:
+	Is how to add a checkbox input
+	
