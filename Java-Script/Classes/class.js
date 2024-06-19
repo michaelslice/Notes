@@ -21,8 +21,7 @@ class Practice
 // Subclass extending Practice
 class Baseball extends Practice
 {
-
-
+    
     constructor(coach, bat)
     {
         super(); // Call the parent class in the child class constructor

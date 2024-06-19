@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="mybutton"></button>
+
+    <script>
+        const button1 = document.getElementById("mybutton");
+
+        button1.addEventListener("click", function(e) {
+            console.log(e); // This is an event OBJECT! And this object has properties: .target, .ctrlKey, etc.
+        })
+
+    </script>
+
+</body>
+</html>
