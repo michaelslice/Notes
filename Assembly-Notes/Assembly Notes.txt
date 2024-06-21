@@ -1,0 +1,109 @@
+Assembly Notes
+
+F3:
+	To back out of any screen in ISPF
+
+Space Units:
+	
+
+Primary Quantity:
+	How many cylinders
+
+Secondary Quantity:
+	If you need more, get the amount
+
+Directory Blocks:
+
+Record Format:
+	All records are same lengths FB(Fixed Block)
+
+Record Length:
+	How many bytes
+
+Block Size:
+	
+		
+
+Data Set Name Type:
+
+JCL:
+	Job control language
+
+IN THE EDITOR
+
+RES:
+	Removes messages
+
+I 99: 
+	Means insert in ISP
+	Ex: I99, means insert 99 lines 
+
+D 5:
+	Means delete 5 lines 
+
+SAVE:
+	Will save the data set
+
+F8:
+	Means scroll forward in ISP
+
+F7:
+	Means scroll backwards
+
+HOW TO LOG OFF PROPERLY
+
+FROM ISPF PRIMARY OPTION MENU:
+	Press F3
+
+SPECIFY DISPOSISITION OF LOG DATA SET:
+	Press 2
+	Type LOGOFF
+
+
+
+HOW TO ACCESS A FILE AND EDIT IT
+ 
+FROM ISPF PRIMARY OPTION MENU
+	Press 2 for edit
+
+	Click enter again
+
+YOU WILL SEE ALL YOUR FILES
+	Press S next to the file you would like to edit 
+
+HOW TO SEQUENTIALLY NUMBER PROGRAM LINES
+	UNNUM, for unnumber
+
+HOW TO SUBMIT TO MAINFRAME FOR EXECUTION
+	SUB
+
+HOW TO VIEW OUTPUT OF PROGRAM
+	enter sd.sf
+
+	or 
+
+	=SD.ST
+
+Go to status:
+	You will see all jobs submitted to mainframe
+
+Type:
+	OWNER KC03AA6
+	Then you will see only your jobs
+
+FORMAT OF ASSEMBLY PROGRAM
+
+	MAIN: BEGINS IN COLUMN 1
+
+	Namonics: BEGIN IN COLUMN 10
+
+	OPERANDS: BEGIN IN COLUMN 16
+
+	LINE DOCUMENTATION CAN BEGIN 1 SPACE AFTER ANY OPERANDS, DONT GO PAST COLUMN 65
+
+YOU NEED TO DOCUMENT EACH LINE OF CODE
+
+XDUMP , IS FOR WHEN YOU WANT TO ADD DOCUMENTATION
+XDUMP IS FINE WHEN NO DOCUMENTATION
+
+	
