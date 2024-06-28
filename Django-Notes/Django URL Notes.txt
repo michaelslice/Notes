@@ -1,0 +1,14 @@
+Django Notes
+
+include(): Is a function thast allows referencing other URLconfs. When Django encounters include(),
+it chops off whatever part of the URL matched up to that point and sends the remaining string to the included URLconf for further processing
+
+path(): Is a function that is passed four arguments, TWO REQUIRED route and view, and two optional kwargs and name
+
+path() argument view: When Django finds a matching pattern it calls the specified view function with an Httprequest object as the first argument and any captured values from the route as keyword arguments
+
+path() arguemetns kwargs: Arbitrayr keyword arguemetns can be passed in a dictionary to the target view 
+
+path() argument: name: Naming your URL lets you refer to it unambioguosly from elsewhere in Django especially from within tempaltes
+
+Each view is responsible for doing one of two things: returning an HttpResponse object containing the content for the requested page, or raising an exception such as Http404. The rest is up to you.
