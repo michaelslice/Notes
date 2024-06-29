@@ -1,0 +1,72 @@
+Django Class Based Views
+
+Class Based Views provide a more structured and reusuable way to handle HTTP requests compared to function based views
+
+
+1. Understanding Class Based Views
+	Class Based Views are Python classes that inherit from Django's 'view' class or its subclass
+	They organize view logic into methods that correspond to different HTTP methods(GET, POST, 	etc)
+
+
+2. Basic Structure
+	A basic Class Based View defines methods for handling different HTTP methods (get(), post())
+	Each methods takes self (the instance of the view) and 'request' as parameters and returns
+	an HTTP response
+	
+	from Django.views import view
+	from Django.http import HttpResponse
+
+	class MyView(view):	
+		def get(self, request):
+			return HttpResponse("Hello, world!"
+
+
+3. URL Mapping
+	Class Based Views are mapped to URLs in Django's URLconf using either 'as_view' method 
+	or the path() shortcut
+
+	from Django.urls import path
+	from .views import myView
+
+	urlpatterns = [	
+		path("hello/", MyView.as_view(), name="hello-view"),
+	]
+
+
+4. Handling HTTP Methods
+	CBVs define methods (get(), post(), etc.) corresponding to HTTP methods. The appropriate 	method is called based on the request method.
+
+	class MyFormView(View):
+    		def get(self, request):
+        		# Handle GET request
+        		return HttpResponse("This is a GET request.")
+
+    		def post(self, request):
+        		# Handle POST request
+        		return HttpResponse("This is a POST request.")
+
+5. Generic Views
+	Django provides pre-built CBVs (generic views) for common use cases such as displaying 	objects (ListView, DetailView), handling forms (FormView, CreateView, UpdateView, 	DeleteView), and more.
+
+	from django.views.generic import ListView
+	from .models import MyModel
+
+	class MyModelListView(ListView):
+    		model = MyModel
+    		template_name = 'myapp/mymodel_list.html'
+    		context_object_name = 'mymodels'
+
+6. Form Handling
+	CBVs handle forms using FormView or its subclasses (CreateView, UpdateView). They 	automatically handle form validation, rendering, and processing.
+
+	from django.views.generic.edit import FormView
+	from .forms import MyForm
+
+	class MyFormView(FormView):
+    		template_name = 'myapp/my_form.html'
+    		form_class = MyForm
+    		success_url = '/thanks/'
+
+    	def form_valid(self, form):
+        	# Process valid form data
+        	return super().form_valid(form)
