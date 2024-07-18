@@ -1,0 +1,21 @@
+HTML TABLE NOTES
+
+<table>: Defines the table element
+
+<tr>: Table row
+
+<th>: Table header
+
+<td>: Table data
+
+<thead>: Table head used to group the header content in a table
+
+<tbody>: Table body used to group the body content in a table
+
+<tfoot>: Table footer used to group the footer content in a table
+
+<caption>: This tag provides a title or description for the table
+
+<col>: Defines attributes for table columns
+
+<colgroup>: Groups columns together for formatting
