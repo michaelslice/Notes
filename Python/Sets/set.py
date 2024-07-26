@@ -1,4 +1,7 @@
 # Sets get { }
+# A set is a unordered collection with no duplicate elements  
+# Sets support mathmatical operations such as 
+# union, intersection, difference, and symmetric difference 
 set = {1, 2, 3, 4, 5, "test"}
 
 set.add(12)
