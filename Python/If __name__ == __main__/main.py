@@ -14,5 +14,6 @@ THIS IS A SCRIPT THAT IS SUPPOSED TO BE RUN
 def main():
     return 12
 
+# This should always be located at the bottom of a file that is suppoed to be a script
 if __name__ == '__main__':
     main()
