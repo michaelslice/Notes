@@ -1,0 +1,32 @@
+4. Filtering and Sorting Query Results
+
+DISTINCT: Is a keyword used to remove duplicate column values
+
+Select Query with Unique Results:
+	SELECT DISTINCT column, another_column,...
+	FROM myTABLE
+	WHERE condtion(s);
+
+Ordering Results:
+
+ORDER BY: Is a keyword used to sort results in a column, in ascending or descending order
+
+Select Query with Ordered Results:
+	SELECT column, another_column,...
+	FROM myTABLE
+	WHERE condition(s)
+	ORDER BY column ASC/DESC
+
+Limiting Results to a Subset:
+
+LIMIT: Will reduce the number of rows to return
+
+OFFSET: Will specify where to begin counting the number rows from
+
+Select Query with Limited Rows:
+	SELECT column, another_column,...
+	FROM myTABLE
+	WHERE condtion(s)
+	ORDER BY column ASC/DESC
+	LIMIT num_limit OFFESET num_offeset;
+
