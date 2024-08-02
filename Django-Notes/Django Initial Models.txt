@@ -1,0 +1,46 @@
+Django Initial Models when 'python manage.py makemigrations'
+
+Listed below are integral features in Django for authentication, permission system, and admin functionality
+
+django_content_type:
+Purpose: Keep track of all the models installed in your Django project. Each record corresponds to a specific model in your app
+Fields: id, app_label, and model
+
+django_migrations:
+Purpose: Records the applied migrations to keep track of which migrations have been run on your database 
+Fields: id, app, name, applied
+
+django_session:
+Purpose: Stores session data for user sessions. This allows user to remain logged in and retain state across requests
+Fields: session_key, session_data, expire_date
+
+auth_user
+Purpose: Stores information about the users of your Django application
+Fields: id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, and date_joined
+
+auth_permission: 
+Purpose: Represents the permissions granted to users or groups such as read or write access to a particular model
+Fields: id, name, content_type_id, codename
+
+auth_group:
+Purpose: Groups users together so that you can assign permissions to a group rather than to individual users
+Fields: id, name
+
+auth_group_permission:
+Purpose: Links groups to permissions, defining which permissions each group has
+Field: id, group_id, permission_id
+
+auth_user_group:
+Purpose: Associates users with groups allowing users to be part of one or more groups
+Fields: id, user_id, group_id
+
+auth_user_user_permissions:
+Purpose: Associates individual user permissions directly to users, which can override group permissions
+Fields: id, user_id, permission_id
+
+django_admin_log:
+Purpose: Records changes made through the Django admin interface, including actions like creating, updating, deleting records
+Fields: id, action_time, user_id, content_type_id, object_id, object_repr, action_flag, change_message
+
+
+
