@@ -1,0 +1,59 @@
+Django Model Queries
+
+1. A model class represents a database table, and an instance of that class represents a particular record in the database table
+
+save(): Used to save a object to the database, after instantiating it
+
+Example: 
+>>> from blog.models import Blog
+>>> b = Blog(name="Beatles Blog", tagline="All the latest Beatles news.")
+>>> b.save()
+
+THIS PERFORMS AN INSERT SQL STATEMENT BEHINDS THE SCENES, DJANGO DOES NOT TOUCH DATABASE UNTIL SAVE() is called
+
+2. Saving Changes to Objects:
+
+If a element all ready exists in the database you can use the save() keyword to change it 
+Given a Blog instance b5 that has already been saved to the database, this example changes its name and updates its record in the database
+
+Example: 
+b5.name = "New name"
+b5.save()
+
+3. Retrieving Objects
+
+To retrieve objects from your database, construct a QuerySet via a Manager on your model class
+
+A QuerySet represents a collection of objects from your database. A QuerySet equates to a SELECT statement, and a filter is a limiting clause such as WHERE or LIMIT
+
+You get a QuerySet by using your model's Manager. Each model has at least one Manager, and its called objects by default. Access it directly via the model class like so
+>>> Blog.objects
+<django.db.models.manager.Manager object at ...>
+>>> b = Blog(name="Foo", tagline="Bar")
+>>> b.objects
+Traceback:
+    ...
+AttributeError: "Manager isn't accessible via Blog instances."
+
+4. Retrieving all Objects
+
+Example:
+all_entries = Entry.objects.all()
+
+5. Retrieving Specific Objects with Filters
+
+Entry.objects.filter(pub_date__year=2006)
+
+6. Chaining Filters
+
+>>> Entry.objects.filter(headline__startswith="What").exclude(
+...     pub_date__gte=datetime.date.today()
+... ).filter(pub_date__gte=datetime.date(2005, 1, 30))
+
+7. Retrieving a Single Object With get()
+
+If you know there is only one object that matches your query you can use the get() method on a Manager which returns the object
+
+one_entry = Entry.objects.get(pk=1)
+
+ 
