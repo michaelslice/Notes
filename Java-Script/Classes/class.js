@@ -3,6 +3,9 @@
 // Super class
 class Practice
 {
+    name;
+    age;
+
     // Called when a Practice object is created
     constructor(name, age)
     {

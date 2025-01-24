@@ -21,7 +21,7 @@ async function test()
         // paused until the HTTP request is completed and the promose returned by fetch() is resolved 
         const response = await fetch('https://www.google.com/')
     
-        const data = await response.json();
+        const data = await response();
 
         console.log(data);
     }
@@ -30,3 +30,5 @@ async function test()
         console.error("Error", error);
     }
 }
+
+test();
