@@ -19,7 +19,11 @@ class Practice
     };
 }
 
+// Inheritence Syntax
+
 // Extends : A keyword used to declare inheritence for a child class to inherit from a parent class
+// super: Used to call the parent class's constructor or methods.
+// this: refers to the object on which the function is being executed.
 
 // Subclass extending Practice
 class Baseball extends Practice

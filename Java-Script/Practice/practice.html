@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet", href="style.css">
+</head>
+
+<body>
+
+    <!-- 
+    
+    Accessing a element by id
+    
+    -->
+    <h1 id="big">YO</h1>
+    <script>
+        let button = document.getElementById("big")
+    
+        button.addEventListener("click", (MouseEvent) => {
+            console.log("TEST");
+        });
+    
+    </script>
+    
+    <!-- 
+    
+    document.querySelector(selector): Selects the first element that matches a CSS selector
+
+    -->
+    <p class="element">My name is Michael</p>
+    <script>
+        let element = document.querySelector(".element");
+
+        element.addEventListener("click", (MouseEvent) => {
+            console.log("TEST");
+        });
+
+    </script>
+
+    <!-- 
+    
+    document.querySelectorAll(selector): Selects all elements that match a CSS selector
+
+    -->
+    <div>
+        <p>THIS IS A PRETTY COOL DOCUMENT!</p>
+    </div>
+    <script>
+        //  returns a NodeList
+        let element1 = document.querySelectorAll("div");
+
+        element1.forEach((div) => {
+            div.addEventListener("click", (MouseEvent) => {
+                console.log("THIS IS A DIV");
+            });
+        });
+    </script>
+
+    <select>
+        <option>NAME</option>
+        <option>AGE</option>
+        <option>CITY</option>
+    </select>
+
+    <button onclick=myFunc()>THIS IS A BUTTON</button>
+    <script> 
+        function myFunc(){
+            alert("YO U CLICKED THIS!")
+            console.log("YOU CLICKED THIS");
+        }
+    </script>
+    
+    <a href="https://google.com">CLICK TO GO TO GOOGLE</a>
+
+    <!-- 
+    
+    Changing content with 
+
+    opt.textContent
+
+    -->
+    <h1 id="TEXT">This is a docuemnt</h1>
+    <h1 id="rem">Click to remove</h1>
+    
+    <script>
+        let opt = document.getElementById("TEXT")
+
+        opt.addEventListener("click", () => {
+            opt.textContent = "YOU CHANGED THE TEXT"
+        })
+
+        let opt1 = document.getElementById("rem")
+
+        opt1.addEventListener("click", () => {
+            opt1.remove("rem");
+        })
+    </script>
+
+    <!-- 
+    
+    Changing content with 
+
+    opt.textContent
+
+    element.style.fontSize, you can change the style of elements from events
+    -->
+
+    <h3 id="yuh">CLICK TO CHANGE SIZE</h3>
+    <script>
+        let yuh = document.getElementById("yuh")
+        let count = 20;
+        yuh.addEventListener("click", () => {
+            
+            yuh.style.fontSize = `${count}px`;
+            count += 20;
+        })
+    </script>
+
+
+</body>
+</html>

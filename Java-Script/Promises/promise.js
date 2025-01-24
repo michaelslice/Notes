@@ -1,47 +1,58 @@
-/**
- *  @note Promises represent the eventual completition or failure of a asynchronous operation and its resulting value.
- * 
- *  @note Promises are suplemented with resolve and reject which are used to settle (fulfill or reject) the promise.
- * 
- *  @note resolve(value) This function is used to fulfill the promise. When resolve is called with the function 
- *  it means that the asynchronous operation was succussfully completed, and the promise is fulfilled with the given value.
- * 
- *  @note reject(reason) This function is used to reject the Promise. When reject is called with a reason (typically an Error object or a descriptive message), 
- *  it signals that the asynchronous operation has failed or encountered an error, and the Promise is rejected with the given reason.
- * 
- */
+// Promise object represents the eventual completion (or failure) of a asynchronous operation and its resulting value
+// Promise is one of three states
+// - pending: neither fulfilled or rejected
+// - fulfilled: operation was successful
+// - rejected: meaning that the operation failed
 
-const promise = new Promise((resolve ,reject) => {
-    setTimeout(() => {
-        resolve("Operation succusful");
-    }, 2000);
-});
+// Synchronous: Happening at the same time
+// Asynchronous: Not happening at the same time
 
-promise.then(result => {
-    console.log(result);
-});
+const myPromise = () => {
+  return new Promise((resolve, reject) => {
+      let success = true;
 
-
-const checkValuePromise = (value) => {
-    return new Promise((resolve, reject) => {
-      if (value > 10) 
-      {
-        resolve(`Value ${value} is greater than or equal to 10`);
-      } 
-      else 
-      {
-        reject(new Error(`Value ${value} is less than 10`));
+      if(success){
+        resolve("Task completed");
       }
-    });
-  };
-  
-// Example usage:
-const valueToCheck = 0;
+      else {
+        reject("Task failed");
+      }
+  })
+}
 
-checkValuePromise(valueToCheck)
+// Consuming our promise with 
+// .then
+// .catch
+myPromise()
 .then((result) => {
-    console.log(result); // Success case
+  console.log(result);
 })
 .catch((error) => {
-    console.error(error.message); // Failure case
-});
+  console.log(error);
+})
+.finally(() => {
+  console.log("THIS GETS EXECUTED LAST!")
+})
+
+
+// Arrow function promises
+
+const promise = new Promise((resolve, reject) => {
+  let num = 5;
+
+  if(num < 10){
+    resolve("Num less than 10")
+  }
+  else {
+    reject("Num is greater than 10")
+  }
+})
+
+// If arrow function just do variable name
+promise
+.then((result) => {
+  console.log(result);
+})
+.catch((error) => {
+  console.log(error);
+})
