@@ -1,3 +1,7 @@
+// To initialize a ts project run
+// npm init -y, node_modules will store all your packages used
+
+
 /* 
 
 Type Annotations
