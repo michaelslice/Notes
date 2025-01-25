@@ -57,3 +57,10 @@ Thumbs.db
 # Common coverage directories
 coverage/
 .nyc_output/
+
+# Rust Build Files
+target/
+*.rs.bk
+*.rs~
+*.exe
+*.pdb
