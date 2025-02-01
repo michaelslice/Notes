@@ -14,24 +14,30 @@ Docker is a virtualization software that simplifies the development and deployme
 
 ---
 
+## Docker Architecture
+![alt text](image.png)
+**Docker Daemon(dockard)**: Listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes. 
+
+**Docker Client**: Is the primary way that many Docker users interact with Docker. When you use commands such as `docker run`, the client sends these commands to `dockard`, which carries them out. The `docker` command uses the Docker API
+
+**Docker Desktop**: Is an easy to install application for your Mac, windows or Linux that enables you to build and share containerized applications and microservice.
+
+**Docker Registry**: A docker registry stores Docker images. And Docker looks for images on Docker Hub
+
+--- 
+
 ## Deployment Process With Containers
 - Docker packages together configuration, application source code, and dependencies into a single artifact called a Docker image.
 
 ---
 
-## Virtual Machine vs. Docker Container
+## Docker Container and the Operating System
 
 ### Docker Containers
 - **Size**: Docker images are much smaller (a few MB).
 - **Speed**: Containers start in seconds.
 - **Compatibility**: Compatible only with Linux distributions.
 - **Virtualization**: Virtualizes the **applications layer** of the OS.
-
-### Virtual Machines
-- **Size**: VM images are larger (a few GB).
-- **Speed**: VMs take minutes to start.
-- **Compatibility**: Compatible with all operating systems.
-- **Virtualization**: Virtualizes both the **applications layer** and the **OS kernel**.
 
 ---
 
@@ -72,7 +78,7 @@ An operating system consists of two main layers:
   - OS layer (e.g., Linux).
 
 ### Docker Containers
-- A running instance of a Docker image.
+- A running instance of a Docker image. You can create, start, stop, move, or delete a container using the Docker API or CLI.
 - Starts the application and creates the container environment.
 
 ---
