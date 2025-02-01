@@ -30,5 +30,3 @@ class Idiot(Bumtopia): # Idiot inherits from Bumtopia
 # Names starting with _variable, should be treated as non public data
 # Name Mangling: Applying double underscore to a variable signifies that 
 # a variable should not be accessed outside the class, __variable
-
-
