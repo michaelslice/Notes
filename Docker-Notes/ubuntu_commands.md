@@ -2,6 +2,7 @@
 
 ## Syntax
 - `&&`: Used to chain commands together
+- `command1 && command2`: If command1 succeeds execute command2
 
 ## Common Ubuntu Commands
 - `apt-get install <package-name>`: Install a package
@@ -15,7 +16,9 @@
 ## Good Practice
 In docker files `\` in the command are used to break a long line into multiple lines for readability
 ```
-RUN apt-get update && apt-get install -y \
+FROM ubuntu:20.04
+
+RUN apt-get update && apt-get install -y --no-install-recommends -y \
     git \
     python3.8 \
     python3.8-dev \
@@ -25,4 +28,6 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     wget \
     && rm -rf /var/lib/apt/lists/*
+
+CMD ["executable", "param1", "param2"]. 
 ```

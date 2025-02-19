@@ -33,7 +33,7 @@ CMD ["python", "app.py"]
 - `EXPOSE <port-number`: Sets configuration on the image that indicates a port the image would like to expose
 - `USER <user-or-uid`: This instruction sets the default user for all subsequent instructions
 - `CMD ["<command>", "<arg1>"]`: Sets the default command a container using the image will run
-- `COPY . .`: Copy all of the files from your project on your machine into the container image by using the COPY instruction
+- `COPY . .`, `COPY <source> <destination`: Copy all of the files from your project on your machine into the container image by using the COPY instruction
 
 ## Common Docker Commands
 - `docker ps`: List all running containers
