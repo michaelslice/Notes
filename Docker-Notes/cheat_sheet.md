@@ -34,10 +34,14 @@ CMD ["python", "app.py"]
 - `USER <user-or-uid`: This instruction sets the default user for all subsequent instructions
 - `CMD ["<command>", "<arg1>"]`: Sets the default command a container using the image will run
 - `COPY . .`, `COPY <source> <destination`: Copy all of the files from your project on your machine into the container image by using the COPY instruction
+- `docker run -v <local-path>:<workspace> image-name`: Mount files on local pc, to a path in thne container
+    - `<local-path>`: Folder on host machine
+    - `<workspace>`: Folder inside container
 
 ## Common Docker Commands
+- `docker run -it <image-name>`: Run a docker container in interactive mode, access terminal in container
 - `docker ps`: List all running containers
-- `docker run <image-name`: Run a container
+- `docker run <image-name>`: Run a container
 - `docker stop <container_name_or_id>`: Stop a container  
 - `docker rm <container_name_or_id>`: Remove a container 
 - `docker images`: List all downloaded images
