@@ -53,3 +53,41 @@ CMD ["python", "app.py"]
 2. Install application dependencies
 3. Copy in any relevant source code and/or binaries
 4. Configure the final image
+
+--- 
+
+## Docker Command Breakdown
+To run a docker image in interactice mode with gpu acceleration and with a mounted volume 
+```sh
+docker run -it --gpus all -v /host/path:/container/path my-image
+```
+- `docker run`: Runs a new container
+- `-it`: Interactive mode
+- `--gpus all`: Enables GPU via Nvidia Container Toolkit
+- `-v /host/path:/container/path`: Mounts a host directory to the container for
+## Use Cases
+- Live Development – Edit code locally, run inside the container
+- Config Files – Share settings without modifying the container
+- Persistent Data – Prevents data loss when the container stops
+
+---
+
+## Volumes
+Volumes are a mechanism for persisting data generated and used by docker containers
+**How to Use a Volume**
+```sh
+docker volume create my_volume
+```
+
+**Listing Volume**
+```sh
+docker volume ls
+```
+
+**Mounting a Volume to a Container**
+```sh
+docker run -d --name my_container -v my_volume:/app/data my_image
+```
+
+--- 
+

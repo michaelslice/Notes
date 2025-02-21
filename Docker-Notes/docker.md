@@ -1,4 +1,4 @@
-# Docker and Docker Compose Notes
+# Docker Notes
 
 ---
 
@@ -158,38 +158,3 @@ A storage and distribution system for Docker images.
 2. **Container Environment**:
    - Copy application files from the host into the container.
    - Execute `npm install` to install dependencies.
-
----
-
-## Docker Compose Overview
-Docker Compose is a tool for defining and running multi-container Docker applications. It allows you to define and run multiple services and applications that belong together in one environment.
-
----
-
-## Docker Compose Configuration
-- A single `YAML` file is used to configure and maintain your application's services.
-- With a single command, you can create and start all the services from your configuration.
-
-### Example
-If you have 10 containers, you can use Docker Compose to write a structured file with all the run commands and define the configuration in one place.
-
----
-
-## `compose.yml` File Structure
-- **`version`**: Specifies the version of Docker Compose (e.g., `3.1`).
-- **`services`**: Lists all the services you want to run.
-- **`ports`**: Defines port mappings between the host and container (e.g., `{HOST_PORT}:{CONTAINER_PORT}`).
-- **`environment`**: Defines environment variables for the services.
-
----
-
-## Network Configuration in Docker Compose
-- By default, Docker Compose sets up a single network for your app.
-- Containers can communicate with each other using their container names.
-
----
-
-## Running Docker Compose
-- Start all services defined in the `compose.yml` file:
-  ```bash
-  docker-compose -f turing-services.yaml up
