@@ -153,6 +153,14 @@ Embeds content from another source into an HTML document, used for ads.
 Allows for something to be clicked in the browser.
 
 ## FORMS:
+Easy way to have the button outside of form.
+```sh
+<form id="my-form">
+...input fields
+</form>
+
+<button type="submit" form="my-form"> </button>
+```
 
 ### `<form>`:
 Form element tag.
