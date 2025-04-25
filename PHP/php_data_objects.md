@@ -1,7 +1,7 @@
 # PDO(PHP Data Objects)
 
 ## Initializing PDO
-```
+```php
 try { // if something goes wrong, an exception is thrown
     $dsn = "mysql:host=courses;dbname=z123456";
     $pdo = new PDO($dsn, $username, $password);
@@ -16,14 +16,14 @@ catch(PDOexception $e) { // handle that exception
 ## PDO `exec()`
 - Execute SQL that doesnt return result
 - Good for `INSERT`, `UPDATE`, `DELETE`
-```
+```php
 $rows_affected = $pdo->exec("DELETE FROM Users WHERE id = 1");
 ```
 
 ## PDO `query()`
 - Execute SQL that returns data
 - Good for `SELECT` statements
-```
+```php
 $data = $pdo->query("SELECT * FROM Users");
 $rows = $data->fetchAll();
 ```
@@ -31,7 +31,7 @@ $rows = $data->fetchAll();
 ## PDO `prepare()`
 - Prepares a SQL statement with placeholders
 - Good for queries with user input
-```
+```php
 $data = $pdo->prepare("SELECT * FROM Users WHERE ID = ? ");
 $test->execute([5]);
 
@@ -43,7 +43,7 @@ $row = $test->fetchAll(); // gets all rows
 
 ## Error Handling
 Good for debugging
-```
+```php
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Or use try/catch around queries
@@ -55,7 +55,7 @@ try {
 ```
 
 ## Fetch Modes
-```
+```php
 $stmt->fetch(PDO::FETCH_ASSOC); // Associative array
 $stmt->fetch(PDO::FETCH_NUM);   // Numeric array
 $stmt->fetch(PDO::FETCH_BOTH);  // Both (default)
@@ -68,7 +68,7 @@ $stmt->fetch(PDO::FETCH_OBJ);   // Object with properties
 - Good for finance, orders, and inventory
 - Ensures that any database operations either all succeed together, or all fail together
 - Maintains data consistency
-```
+```php
 try {
     $pdo->beginTransaction();
 

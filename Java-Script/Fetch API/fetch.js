@@ -15,7 +15,6 @@ async function makeRequest(){
 
 makeRequest();
 
-
 const request = async () => {
     const url = "https://google.com";
 

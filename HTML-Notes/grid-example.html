@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 75px 75px 75px;     /* Create 3 columns each 75px wide */ 
+            grid-template-rows: 75px 75px;             /* Create 2 rows each 75px tall */
+            gap: 32px;                                 /* Add 32px of spacing between rows and columns */
+        
+            grid-template: 75px 75px 75px / 75px 75px 75px; /* Shorthand for above, before slash is rows, after slash is columns*/
+        }
+
+        .grid {
+            background-color: red;
+            border: 1px solid black;
+        }
+    </style>
+    
+    <div class="grid-container">
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+        <div class="grid"></div>
+    </div>
+</body>
+</html>
